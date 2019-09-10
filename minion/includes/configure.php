@@ -14,7 +14,7 @@
 /**
  * Enter the domain for your Admin URL. If you have SSL, enter the correct https address in the HTTP_SERVER setting, instead of just an http address.
  */
-define('HTTP_SERVER', 'https://www.iemssupply.net/');
+define('HTTP_SERVER', 'https://www.iemssupply.net');
 /**
  * Note about HTTPS_SERVER:
  * There is no longer an HTTPS_SERVER setting for the Admin. Instead, put your SSL URL in the HTTP_SERVER setting above.
