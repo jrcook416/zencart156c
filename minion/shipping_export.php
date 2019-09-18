@@ -764,7 +764,7 @@ while (!$orders_status->EOF) {
                                                            <td class="dataTableContent"><?php echo $delivery_city; ?></td>
                                                            <td class="dataTableContent"><?php echo $delivery_postcode; ?></td>
                                                            <td class="dataTableContent"><?php echo $delivery_state; ?></td>
-                                                           <td class="dataTableContent"><?php echo $delivery_country; ?></td>
+                                                           <td class="dataTableContent"><?php echo $status_array[$newStatus]['text']; ?></td>
                                                            <td class="dataTableContent"><a
                                                                        href="<?php echo zen_href_link(FILENAME_ORDERS, 'page=1&oID=' . $order_id . '&action=edit', 'NONSSL'); ?>"><img
                                                                            src="images/icons/preview.gif" border="0"
