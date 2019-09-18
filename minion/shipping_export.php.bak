@@ -365,8 +365,6 @@ if (isset($_POST['download_csv'])) { // If form was submitted then do processing
       }
 
       if ($_POST['order_discount'] == 1) { // if order discount was selected, then run the query to pull the data for adding it to the export string.
-
-
 // Run a query to pull the Order Discount total if present
          $orders_discount_query = "SELECT o.orders_id, ot.value
 	FROM (" . TABLE_ORDERS . " o LEFT JOIN " . TABLE_ORDERS_PRODUCTS . " op ON o.orders_id = op.orders_id), " . TABLE_ORDERS_TOTAL . " ot
@@ -431,9 +429,9 @@ if (isset($_POST['download_csv'])) { // If form was submitted then do processing
       }
       */
 //*************eof State Abbr Codes********************//
+      /***********************************************************************************************************************************/
 
-  
-    if ($_POST['product_details'] == 1) { // Order details should be added to the export string.
+      if ($_POST['product_details'] == 1) { // Order details should be added to the export string.
 
          if ($_POST['filelayout'] == 2) { // 1 PPR RADIO
 
