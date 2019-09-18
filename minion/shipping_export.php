@@ -750,6 +750,7 @@ while (!$orders_status->EOF) {
                                                    while (!$order->EOF) {
                                                       list($order_id, $cust_email, $delivery_name, $delivery_company, $delivery_street, $delivery_suburb, $delivery_city, $delivery_postcode, $delivery_state, $delivery_country, $shipping_method, $customers_telephone, $order_total, $product_model, $product_name, $product_price, $product_qty, $date_purchased, $orders_status, $comments) = array_values($order->fields);
                                                       $status = $order->fields['orders_status'];
+													  $newStatus = $status - 1; 
     $newStatus = $status - 1;						?>
                                                        <!--<tr class="dataTableRow" onmouseover="rowOverEffect(this)" onmouseout="rowOutEffect(this)" onclick="window.open('<?php echo zen_href_link(FILENAME_ORDERS, 'page=1&oID=' . $order_id . '&action=edit', 'NONSSL'); ?>')">-->
                                                        <tr class="dataTableRow" onMouseOver="rowOverEffect(this)"
