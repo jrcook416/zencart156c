@@ -1,1 +1,0 @@
-Please use the proper IEMS/IFD Unit Identifier on the delivery screen.
