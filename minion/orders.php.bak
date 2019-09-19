@@ -31,27 +31,6 @@ if (!isset($_GET['page'])) $_GET['page'] = '';
 
 include DIR_FS_CATALOG . DIR_WS_CLASSES . 'order.php';
 
-/* BOF Zen4All Order Comment 1 of 3 */
-// prepare order comment pulldown list
-$predefinedCommentsQuery = "SELECT comment_id, comment_title, comment_content
-                            FROM " . TABLE_ORDER_COMMENTS_CONTENT . "
-                            WHERE language_id = " . (int)$_SESSION['languages_id'] . "
-                            ORDER BY comment_id ASC";
-$predefinedComments = $db->Execute($predefinedCommentsQuery);
-$predefinedCommentsArray = array();
-$predefinedCommentsArray[0] = array(
-  'id' => NULL,
-  'text' => TEXT_SELECT_COMMENT
-);
-foreach($predefinedComments as $predefinedComment) {
-  $predefinedCommentsArray[] = array(
-    'id' => $predefinedComment['comment_id'],
-    'text' => $predefinedComment['comment_title'],
-    'content' => addslashes($predefinedComment['comment_content'])
-  );
-}
-/* EOF Zen4All Order Comment 1 of 3 */
-
 // prepare order-status pulldown list
 $orders_statuses = array();
 $orders_status_array = array();
@@ -359,30 +338,6 @@ if (zen_not_null($action) && $order_exists == true) {
     require(DIR_WS_INCLUDES . 'header.php');
     ?>
     <!-- header_eof //-->
-<?php /* BOF Zen4All Order Comment 2 of 3 */ ?>
-    <script>
-      var commentsArray = new Array(
-<?php
-$i = 0;
-$len = count($predefinedCommentsArray);
-foreach ($predefinedCommentsArray as $value) {
-  if ($i == $len - 1) {
-    echo "{value : '" . $value['id'] . "', comment : `" . $value['content'] . "`}";
-  } else {
-    echo "{value : '" . $value['id'] . "', comment : `" . $value['content'] . "`},";
-  }
-  $i++;
-}
-?>
-                );
-    $(document).ready(function() {
-      $('#predefined_comments').change(function(){
-        val = $(":selected", this).index();
-        $('textarea[name="comments"]').val(commentsArray[val].comment);
-      });
-    });
-    </script>
-<?php /* EOF Zen4All Order Comment 2 of 3 */ ?>
     <!-- body //-->
     <div class="container-fluid">
       <!-- body_text //-->
@@ -767,8 +722,7 @@ foreach ($predefinedCommentsArray as $value) {
         <div class="row noprint">
           <div class="formArea">
               <?php echo zen_draw_form('statusUpdate', FILENAME_ORDERS, zen_get_all_get_params(array('action')) . 'action=update_order', 'post', 'class="form-horizontal"', true); ?>
-            
-			<div class="form-group">
+            <div class="form-group">
                 <?php echo zen_draw_label(TABLE_HEADING_COMMENTS, 'comments', 'class="col-sm-3 control-label"'); ?>
               <div class="col-sm-9">
                   <?php echo zen_draw_textarea_field('comments', 'soft', '60', '5', '', 'id="comments" class="form-control"'); ?>
