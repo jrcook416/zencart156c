@@ -767,7 +767,14 @@ foreach ($predefinedCommentsArray as $value) {
         <div class="row noprint">
           <div class="formArea">
               <?php echo zen_draw_form('statusUpdate', FILENAME_ORDERS, zen_get_all_get_params(array('action')) . 'action=update_order', 'post', 'class="form-horizontal"', true); ?>
-            
+                        <?php /* BOF Zen4All Order Comment 3 of 3 */ ?>
+            <div class="form-group">
+              <?php echo zen_draw_label(ENTRY_PREDEFINED_COMMENTS, 'predefined_comments', 'class="col-sm-3 control-label"'); ?>
+              <div class="col-sm-9">
+                  <?php echo zen_draw_pull_down_menu('predefined_comments', $predefinedCommentsArray, '', 'id="predefined_comments" class="form-control" readonly'); ?>
+              </div>
+            </div>
+            <?php /* EOF Zen4All Order Comment 3 of 3 */ ?>
 			<div class="form-group">
                 <?php echo zen_draw_label(TABLE_HEADING_COMMENTS, 'comments', 'class="col-sm-3 control-label"'); ?>
               <div class="col-sm-9">
