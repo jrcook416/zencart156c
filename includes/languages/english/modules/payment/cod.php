@@ -20,6 +20,6 @@
 // $Id: cod.php 1969 2005-09-13 06:57:21Z drbyte $
 //
 
-  define('MODULE_PAYMENT_COD_TEXT_TITLE', 'Cash on Delivery');
-  define('MODULE_PAYMENT_COD_TEXT_DESCRIPTION', 'Cash on Delivery');
+  define('MODULE_PAYMENT_COD_TEXT_TITLE', 'Invoice Billing Direct to Agency');
+  define('MODULE_PAYMENT_COD_TEXT_DESCRIPTION', 'Invoice Billing Direct to Agency');
 ?>

@@ -7,9 +7,9 @@
  * @version GIT: $Id: Author: DrByte  Thu Feb 14 23:03:50 2013 -0500 Modified in v1.5.2 $
  */
 
-define('MODULE_SHIPPING_STOREPICKUP_TEXT_TITLE', 'Store Pickup');
-define('MODULE_SHIPPING_STOREPICKUP_TEXT_DESCRIPTION', 'Customer In Store Pick-up');
-define('MODULE_SHIPPING_STOREPICKUP_TEXT_WAY', 'Walk In');
+define('MODULE_SHIPPING_STOREPICKUP_TEXT_TITLE', 'Pickup at IEMS Logistics Warehouse');
+define('MODULE_SHIPPING_STOREPICKUP_TEXT_DESCRIPTION', 'Pickup at IEMS Logistics Warehouse');
+define('MODULE_SHIPPING_STOREPICKUP_TEXT_WAY', 'Pickup at IEMS Logistics Warehouse');
 
 
 // The following is for defining multiple locations/methods on a per-language basis. It is only used if the shopper has selected a language other than the store's default.
