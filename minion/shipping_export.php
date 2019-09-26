@@ -877,10 +877,10 @@ while (!$orders_status->EOF) {
                                                                     <tr>
                                                                         <td>
                                                                             <input type="radio" name="status_target"
-                                                                                   value="1" checked>Any Order
+                                                                                   value="1">Any Order
                                                                             Status<br/>
                                                                             <input type="radio" name="status_target"
-                                                                                   value="2">Assigned Order Status
+                                                                                   value="2" checked>Assigned Order Status
                                                                             (select below)
                                                                         </td>
                                                                     </tr>
