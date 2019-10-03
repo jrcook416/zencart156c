@@ -1,0 +1,38 @@
+From 7c892ce843a86201eef38aac14ae66974af60bd8 Mon Sep 17 00:00:00 2001
+From: Jeremiah Cook <jeremiah.cook@indianapolisems.org>
+Date: Thu, 3 Oct 2019 14:27:15 -0400
+Subject: [PATCH] Administrative password reset policy removal.
+
+---
+ minion/includes/functions/admin_access.php | 1 +
+ minion/login.php                           | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/minion/includes/functions/admin_access.php b/minion/includes/functions/admin_access.php
+index 8cc8ff8..3339920 100644
+--- a/minion/includes/functions/admin_access.php
++++ b/minion/includes/functions/admin_access.php
+@@ -152,6 +152,7 @@ function zen_insert_user($name, $email, $password, $confirm, $profile)
+     $errors[] = ERROR_PASSWORDS_NOT_MATCHING;
+   }
+   if (zen_check_for_password_problems($password, 0)) {
++	  return FALSE;
+     $errors[] = ENTRY_PASSWORD_CHANGE_ERROR . ' ' . sprintf(ERROR_PASSWORD_RULES, ((int)ADMIN_PASSWORD_MIN_LENGTH < 7 ? 7 : (int)ADMIN_PASSWORD_MIN_LENGTH));
+   }
+   if ($profile == 0)
+diff --git a/minion/login.php b/minion/login.php
+index d8f3814..162182e 100644
+--- a/minion/login.php
++++ b/minion/login.php
+@@ -11,7 +11,7 @@ require('includes/application_top.php');
+ define('ADMIN_SWITCH_SEND_LOGIN_FAILURE_EMAILS', 'Yes'); // Can be set to 'No' if you don't want warning/courtesy emails to be sent after several login failures have occurred
+ // PCI-DSS / PA-DSS requirements for lockouts and intervals:
+ define('ADMIN_LOGIN_LOCKOUT_TIMER', (30 * 60));
+-define('ADMIN_PASSWORD_EXPIRES_INTERVAL', strtotime('- 90 day'));
++define('ADMIN_PASSWORD_EXPIRES_INTERVAL', strtotime('- 36500 day'));
+ 
+ //////////
+ $admin_name = $admin_pass = $message = "";
+-- 
+1.9.5.msysgit.0
+
