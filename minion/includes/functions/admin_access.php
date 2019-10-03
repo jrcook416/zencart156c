@@ -152,6 +152,7 @@ function zen_insert_user($name, $email, $password, $confirm, $profile)
     $errors[] = ERROR_PASSWORDS_NOT_MATCHING;
   }
   if (zen_check_for_password_problems($password, 0)) {
+	  return FALSE;
     $errors[] = ENTRY_PASSWORD_CHANGE_ERROR . ' ' . sprintf(ERROR_PASSWORD_RULES, ((int)ADMIN_PASSWORD_MIN_LENGTH < 7 ? 7 : (int)ADMIN_PASSWORD_MIN_LENGTH));
   }
   if ($profile == 0)
