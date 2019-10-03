@@ -19,7 +19,7 @@
 
 // added defines for header alt and text
   define('HEADER_ALT_TEXT', 'Powered by Zen Cart :: The Art of E-Commerce');
-  define('HEADER_SALES_TEXT', 'Indianapolis EMS Logistics');
+  define('HEADER_SALES_TEXT', 'Indianapolis Metropolitan Law Enforcement powered by Indianapolis EMS Logistics');
   define('HEADER_LOGO_WIDTH', '192px');
   define('HEADER_LOGO_HEIGHT', '64px');
   define('HEADER_LOGO_IMAGE', 'logo.gif');
