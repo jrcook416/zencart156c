@@ -791,10 +791,10 @@ foreach ($predefinedCommentsArray as $value) {
                 <div class="col-sm-3 control-label" style="font-weight: 700;"><?php echo ENTRY_NOTIFY_CUSTOMER; ?></div>
               <div class="col-sm-9">
                 <div class="radio">
-                  <label><?php echo zen_draw_radio_field('notify', '1', true) . TEXT_EMAIL; ?></label>
+                  <label><?php echo zen_draw_radio_field('notify', '1', FALSE) . TEXT_EMAIL; ?></label>
                 </div>
                 <div class="radio">
-                  <label><?php echo zen_draw_radio_field('notify', '0', FALSE) . TEXT_NOEMAIL; ?></label>
+                  <label><?php echo zen_draw_radio_field('notify', '0', true) . TEXT_NOEMAIL; ?></label>
                 </div>
                 <div class="radio">
                   <label><?php echo zen_draw_radio_field('notify', '-1', FALSE) . TEXT_HIDE; ?></label>
