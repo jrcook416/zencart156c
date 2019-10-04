@@ -127,6 +127,8 @@
 
 // is there a products_price to add to attributes
       $products_price = $product_check->fields['products_price'];
+	  $products_price .= " ";
+      $products_uom = $product_check->fields['products_price_uom']; 
 
       // do not select display only attributes and attributes_price_base_included is true
       $product_att_query = $db->Execute("select options_id, price_prefix, options_values_price, attributes_display_only, attributes_price_base_included, round(concat(price_prefix, options_values_price), 5) as value from " . TABLE_PRODUCTS_ATTRIBUTES . " where products_id = '" . (int)$products_id . "' and attributes_display_only != '1' and attributes_price_base_included='1'". " order by options_id, value");
@@ -274,7 +276,9 @@ if (false) {
       }
     }
 
-    return $final_display_price . $free_tag . $call_tag;
+    return $final_display_price . $free_tag . $call_tag . ' ' . $display_uom;
+	echo " ";
+	echo $display_uom;
   }
 
 ////

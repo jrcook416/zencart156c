@@ -36,7 +36,7 @@
 
     $zco_notifier->notify('NOTIFY_PRODUCT_VIEWS_HIT_INCREMENTOR', (int)$_GET['products_id']);
 
-    $sql = "select p.products_id, pd.products_name,
+    $sql = "select p.products_id, pd.products_name, p.products_price_uom,
                   pd.products_description, p.products_model,
                   p.products_quantity, p.products_image,
                   pd.products_url, p.products_price,
@@ -106,6 +106,7 @@
   $products_manufacturer = $manufacturers_name;
   $products_weight = $product_info->fields['products_weight'];
   $products_quantity = $product_info->fields['products_quantity'];
+  $products_uom = $product_info->fields['products_price_uom']; 
 
   $products_qty_box_status = $product_info->fields['products_qty_box_status'];
   $products_quantity_order_max = $product_info->fields['products_quantity_order_max'];

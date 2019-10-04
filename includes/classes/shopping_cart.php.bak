@@ -1378,7 +1378,7 @@ class shoppingCart extends base {
 
         $products_array[] = array('id' => $products_id,
                                   'category' => $products->fields['master_categories_id'],
-                                  'name' => $products->fields['products_name'] . " (" . $products->fields['products_price_uom'] . ")",
+                                  'name' => $products->fields['products_name'],
                                   'model' => $products->fields['products_model'],
                                   'image' => $products->fields['products_image'],
                                   'price' => ($products->fields['product_is_free'] =='1' ? 0 : $products_price),
