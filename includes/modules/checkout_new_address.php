@@ -77,7 +77,7 @@ if (isset($_POST['action']) && ($_POST['action'] == 'submit')) {
     
         $messageStack->add_session('checkout_address', ENTRY_SUBURB_ERROR);
         $error = true;
-	
+    }
 	
     if (ACCOUNT_STATE == 'true') {
       $check_query = "SELECT count(*) AS total
@@ -260,3 +260,4 @@ if (isset($_POST['action']) && ($_POST['action'] == 'submit')) {
 
 // This should be last line of the script:
 $zco_notifier->notify('NOTIFY_MODULE_END_CHECKOUT_NEW_ADDRESS');
+?>
