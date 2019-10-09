@@ -72,7 +72,13 @@ if (isset($_POST['action']) && ($_POST['action'] == 'submit')) {
       $error = true;
       $messageStack->add('checkout_address', ENTRY_CITY_ERROR);
     }
-
+    $test = "00 PLEASE PICK YOUR UNIT";
+    if (strpos($suburb, $test) !== FALSE){
+    
+        $messageStack->add_session('checkout_address', ENTRY_SUBURB_ERROR);
+        $error = true;
+	
+	
     if (ACCOUNT_STATE == 'true') {
       $check_query = "SELECT count(*) AS total
                       FROM " . TABLE_ZONES . "

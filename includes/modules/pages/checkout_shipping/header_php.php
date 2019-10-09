@@ -73,6 +73,15 @@
   require(DIR_WS_CLASSES . 'order.php');
   $order = new order;
 
+  $suburb = $order->delivery['suburb'];
+  $test = "00 PLEASE PICK YOUR UNIT";
+  if (strpos($suburb, $test) !== FALSE){
+      
+      $messageStack->add_session('checkout_address', ENTRY_SUBURB_ERROR . "CHECKOUT_SHIPPING", 'error');
+      $error = true;
+      zen_redirect(zen_href_link(FILENAME_CHECKOUT_SHIPPING_ADDRESS, '','SSL'));
+      
+  }
 // register a random ID in the session to check throughout the checkout procedure
 // against alterations in the shopping cart contents
 if (isset($_SESSION['cart']->cartID)) {

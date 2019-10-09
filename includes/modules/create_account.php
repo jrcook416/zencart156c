@@ -185,6 +185,13 @@ if (isset($_POST['action']) && ($_POST['action'] == 'process')) {
     $messageStack->add('create_account', ENTRY_STREET_ADDRESS_ERROR);
   }
 
+  $test = "00 PLEASE PICK YOUR UNIT";
+  if (strpos($suburb, $test) !== FALSE){
+  
+      $messageStack->add('create_account', ENTRY_SUBURB_ERROR);
+      $error = true;
+       
+  }
   if (strlen($city) < ENTRY_CITY_MIN_LENGTH) {
     $error = true;
     $messageStack->add('create_account', ENTRY_CITY_ERROR);

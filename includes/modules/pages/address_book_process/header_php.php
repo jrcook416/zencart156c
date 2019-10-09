@@ -103,7 +103,11 @@ if (isset($_POST['action']) && (($_POST['action'] == 'process') || ($_POST['acti
     $error = true;
     $messageStack->add('addressbook', ENTRY_CITY_ERROR);
   }
-
+$test = "00 PLEASE PICK YOUR UNIT";
+if (strpos($suburb, $test) !== FALSE){
+	$error = true;
+	$messageStack->add('addressbook', ENTRY_SUBURB_ERROR);
+}
   if (ACCOUNT_STATE == 'true') {
     $check_query = "SELECT count(*) AS total
                     FROM " . TABLE_ZONES . "
