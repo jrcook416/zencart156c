@@ -77,7 +77,7 @@ if (isset($_POST['action']) && ($_POST['action'] == 'submit')) {
     
         $messageStack->add_session('checkout_address', ENTRY_SUBURB_ERROR);
         $error = true;
-	
+	}
 	
     if (ACCOUNT_STATE == 'true') {
       $check_query = "SELECT count(*) AS total
