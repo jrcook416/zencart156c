@@ -509,16 +509,16 @@ foreach ($predefinedCommentsArray as $value) {
         <div class="row"><?php echo zen_draw_separator(); ?></div>
         <div class="row">
           <div class="col-sm-4">
-		  <table class="table">
-              <tr>
-                <td><strong><?php echo ENTRY_SHIPPING_ADDRESS; ?></strong></td>
-                <td><?php echo zen_address_format($order->delivery['format_id'], $order->delivery, 1, '', '<br>'); ?></td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td class="noprint"><a href="https://maps.google.com/maps/search/?api=1&amp;query=<?php echo urlencode($order->delivery['street_address'] . ',' . $order->delivery['city'] . ',' . $order->delivery['state'] . ',' . $order->delivery['postcode']); ?>" target="map"><i class="fa fa-map">&nbsp;</i> <u><?php echo TEXT_MAP_SHIPPING_ADDRESS; ?></u></a></td>
-              </tr>
-            </table>
+		<table class="table">
+              		<tr>
+                	<td><strong><?php echo ENTRY_SHIPPING_ADDRESS; ?></strong></td>
+                	<td><?php echo zen_address_format($order->delivery['format_id'], $order->delivery, 1, '', '<br>'); ?></td>
+              		</tr>
+              		<tr>
+                	<td>&nbsp;</td>
+                	<td class="noprint"><a href="https://maps.google.com/maps/search/?api=1&amp;query=<?php echo urlencode($order->delivery['street_address'] . ',' . $order->delivery['city'] . ',' . $order->delivery['state'] . ',' . $order->delivery['postcode']); ?>" target="map"><i class="fa fa-map">&nbsp;</i> <u><?php echo TEXT_MAP_SHIPPING_ADDRESS; ?></u></a></td>
+              		</tr>
+            	</table>
             <table class="table">
               <tr>
                 <td class="noprint"><strong><?php echo ENTRY_CUSTOMER_ADDRESS; ?></strong></td>
