@@ -507,7 +507,7 @@ foreach ($predefinedCommentsArray as $value) {
           </div>
         </div>
 <div class="row"><?php echo zen_draw_separator(); ?></div>
-        <div class="row">
+        <!---<div class="row">--->
           <div class="col-sm-4">
             <table class="table">
               <tr>
@@ -568,7 +568,7 @@ foreach ($predefinedCommentsArray as $value) {
                 <td class="noprint"><a href="https://maps.google.com/maps/search/?api=1&amp;query=<?php echo urlencode($order->billing['street_address'] . ',' . $order->billing['city'] . ',' . $order->billing['state'] . ',' . $order->billing['postcode']); ?>" target="map"><i class="fa fa-map">&nbsp;</i> <u><?php echo TEXT_MAP_BILLING_ADDRESS; ?></u></a></td>
               </tr>
             </table>
-          </div>
+            </div>
         <div class="row"><?php echo zen_draw_separator('pixel_trans.gif', '1', '10'); ?></div>
         <div class="row"><strong><?php echo ENTRY_ORDER_ID . $oID; ?></strong></div>
         <div class="row">
