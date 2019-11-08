@@ -630,10 +630,10 @@ foreach ($predefinedCommentsArray as $value) {
             <tr class="dataTableHeadingRow">
               <th class="dataTableHeadingContent" colspan="2"><?php echo TABLE_HEADING_PRODUCTS; ?></th>
               <th class="dataTableHeadingContent"><?php echo TABLE_HEADING_PRODUCTS_MODEL; ?></th>
-              <th class="dataTableHeadingContent text-right"><?php echo TABLE_HEADING_TAX; ?></th>
-              <th class="dataTableHeadingContent text-right"><?php echo TABLE_HEADING_PRICE_EXCLUDING_TAX; ?></th>
-              <th class="dataTableHeadingContent text-right"><?php echo TABLE_HEADING_PRICE_INCLUDING_TAX; ?></th>
-              <th class="dataTableHeadingContent text-right"><?php echo TABLE_HEADING_TOTAL_EXCLUDING_TAX; ?></th>
+              <th class="dataTableHeadingContent text-right noprint"><?php echo TABLE_HEADING_TAX; ?></th>
+              <th class="dataTableHeadingContent text-right noprint"><?php echo TABLE_HEADING_PRICE_EXCLUDING_TAX; ?></th>
+              <th class="dataTableHeadingContent text-right noprint"><?php echo TABLE_HEADING_PRICE_INCLUDING_TAX; ?></th>
+              <th class="dataTableHeadingContent text-right noprint"><?php echo TABLE_HEADING_TOTAL_EXCLUDING_TAX; ?></th>
               <th class="dataTableHeadingContent text-right"><?php echo TABLE_HEADING_TOTAL_INCLUDING_TAX; ?></th>
             </tr>
             <?php
@@ -664,14 +664,14 @@ foreach ($predefinedCommentsArray as $value) {
                     ?>
                 </td>
                 <td class="dataTableContent"><?php echo $order->products[$i]['model']; ?></td>
-                <td class="dataTableContent text-right"><?php echo zen_display_tax_value($order->products[$i]['tax']); ?>%</td>
-                <td class="dataTableContent text-right">
+                <td class="dataTableContent text-right noprint"><?php echo zen_display_tax_value($order->products[$i]['tax']); ?>%</td>
+                <td class="dataTableContent text-right noprint">
                   <strong><?php echo $currencies->format($order->products[$i]['final_price'], true, $order->info['currency'], $order->info['currency_value']) . ($order->products[$i]['onetime_charges'] != 0 ? '<br>' . $currencies->format($order->products[$i]['onetime_charges'], true, $order->info['currency'], $order->info['currency_value']) : ''); ?></strong>
                 </td>
-                <td class="dataTableContent text-right">
+                <td class="dataTableContent text-right noprint">
                   <strong><?php echo $currencies->format(zen_add_tax($order->products[$i]['final_price'], $order->products[$i]['tax']), true, $order->info['currency'], $order->info['currency_value']) . ($order->products[$i]['onetime_charges'] != 0 ? '<br>' . $currencies->format(zen_add_tax($order->products[$i]['onetime_charges'], $order->products[$i]['tax']), true, $order->info['currency'], $order->info['currency_value']) : ''); ?></strong>
                 </td>
-                <td class="dataTableContent text-right">
+                <td class="dataTableContent text-right noprint">
                   <strong><?php echo $currencies->format(zen_round($order->products[$i]['final_price'], $currencies->get_decimal_places($order->info['currency'])) * $order->products[$i]['qty'], true, $order->info['currency'], $order->info['currency_value']) . ($order->products[$i]['onetime_charges'] != 0 ? '<br>' . $currencies->format($order->products[$i]['onetime_charges'], true, $order->info['currency'], $order->info['currency_value']) : ''); ?></strong>
                 </td>
                 <td class="dataTableContent text-right">
