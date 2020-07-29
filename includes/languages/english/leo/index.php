@@ -14,7 +14,7 @@ if (STORE_STATUS == '0') {
   define('TEXT_GREETING_GUEST', 'Welcome <span class="greetUser">Guest!</span> Would you like to <a href="%s">log yourself in</a>?');
 } else {
   define('TEXT_GREETING_GUEST', 'Welcome, please enjoy our online showcase.');
-}define('TEXT_GREETING_PERSONAL', 'Hello <span class="greetUser">%s</span>!<br><b>NOTICE:</b><br>There is a worldwide shortage of exam gloves.  The situation has rapidly escalated and supplies
+}define('TEXT_GREETING_PERSONAL', 'Hello <span class="greetUser">%s</span>!<br>NOTICE:<br><br>There is a worldwide shortage of exam gloves.  The situation has rapidly escalated and supplies
 are extremely limited. Prices have increased dramatically and supply has decreased rapidly.  Please contact IEMS Logistics Chief Kevin Gona at (317) 223-8431 with questions. <br>Hydrogen Peroxide wipes are no longer available. <br>MAD devices are back in stock. 
 <br><p>The following drugs are on critical nationwide shortage and may be unavailable. 
 We cannot guarantee pharmacy item delivery due to the shortages:<br>
