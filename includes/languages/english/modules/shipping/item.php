@@ -20,7 +20,7 @@
 // $Id: item.php 1969 2005-09-13 06:57:21Z drbyte $
 //
 
-define('MODULE_SHIPPING_ITEM_TEXT_TITLE', 'Per Item');
-define('MODULE_SHIPPING_ITEM_TEXT_DESCRIPTION', 'Per Item');
-define('MODULE_SHIPPING_ITEM_TEXT_WAY', 'Best Way');
+define('MODULE_SHIPPING_ITEM_TEXT_TITLE', 'Pickup at Warehouse');
+define('MODULE_SHIPPING_ITEM_TEXT_DESCRIPTION', 'Pickup at Warehouse');
+define('MODULE_SHIPPING_ITEM_TEXT_WAY', 'Pickup at Warehouse');
 ?>
