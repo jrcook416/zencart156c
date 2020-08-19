@@ -969,12 +969,13 @@ if ($action == 'edit') {
                                 <td><input name="update_delivery_street_address" size="45" value="<?php echo zen_html_quotes($order->delivery['street_address']); ?>" <?php echo $max_street_address_length; ?>></td>
                             </tr>
                             <tr>
+				                <?php unit_lookup(); ?>
                                 <td class="eo-label"><?php echo ENTRY_CUSTOMER_SUBURB; ?>:&nbsp;</td>
-                                <td><input name="update_customer_suburb" size="45" value="<?php echo zen_html_quotes($order->customer['suburb']); ?>" <?php echo $max_suburb_length; ?>></td>
+                                <td><?php echo zen_draw_pull_down_menu('update_customer_suburb',$unit_array, $order->customer['suburb']); ?></td>
                                 <td class="eo-label"><?php echo ENTRY_CUSTOMER_SUBURB; ?>:&nbsp;</td>
-                                <td><input name="update_billing_suburb" size="45" value="<?php echo zen_html_quotes($order->billing['suburb']); ?>" <?php echo $max_suburb_length; ?>></td>
+                                <td><?php echo zen_draw_pull_down_menu('update_billing_suburb',$unit_array, $order->billing['suburb']); ?></td>
                                 <td class="eo-label"><?php echo ENTRY_CUSTOMER_SUBURB; ?>:&nbsp;</td>
-                                <td><input name="update_delivery_suburb" size="45" value="<?php echo zen_html_quotes($order->delivery['suburb']); ?>" <?php echo $max_suburb_length; ?>></td>
+                                <td><?php echo zen_draw_pull_down_menu('update_delivery_suburb',$unit_array, $order->delivery['suburb']); ?></td>
                             </tr>
                             <tr>
                                 <td class="eo-label"><?php echo ENTRY_CUSTOMER_CITY; ?>:&nbsp;</td>
