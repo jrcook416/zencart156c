@@ -36,7 +36,7 @@
 <fieldset>
 <legend><?php echo CATEGORY_COMPANY; ?></legend>
 <label class="inputLabel" for="company"><?php echo ENTRY_COMPANY; ?></label>
-<?php echo zen_draw_input_field('company', '', zen_set_field_length(TABLE_ADDRESS_BOOK, 'entry_company', '40') . ' id="company" disabled="disabled"') . (zen_not_null(ENTRY_COMPANY_TEXT) ? '<span class="alert">' . ENTRY_COMPANY_TEXT . '</span>': ''); ?>
+<?php echo zen_draw_input_field('company', 'Indianapolis Fire Department', zen_set_field_length(TABLE_ADDRESS_BOOK, 'entry_company', '40') . ' id="company" disabled="disabled"') . (zen_not_null(ENTRY_COMPANY_TEXT) ? '<span class="alert">' . ENTRY_COMPANY_TEXT . '</span>': ''); ?>
 </fieldset>
 <?php
   }
@@ -62,7 +62,7 @@
 <br class="clearBoth" />
 
 <label class="inputLabel" for="street-address"><?php echo ENTRY_STREET_ADDRESS; ?></label>
-  <?php echo zen_draw_input_field('street_address', '3930 Georgetown Road', zen_set_field_length(TABLE_ADDRESS_BOOK, 'entry_street_address', '40') . ' id="street-address"') . (zen_not_null(ENTRY_STREET_ADDRESS_TEXT) ? '<span class="alert">' . ENTRY_STREET_ADDRESS_TEXT . '</span>': ''); ?>
+  <?php echo zen_draw_input_field('street_address', '955 Fort Wayne Avenue', zen_set_field_length(TABLE_ADDRESS_BOOK, 'entry_street_address', '40') . ' id="street-address"') . (zen_not_null(ENTRY_STREET_ADDRESS_TEXT) ? '<span class="alert">' . ENTRY_STREET_ADDRESS_TEXT . '</span>': ''); ?>
 <br class="clearBoth" />
 
 <?php echo zen_draw_input_field('should_be_empty', '', ' size="40" id="CAAS" style="visibility:hidden; display:none;" autocomplete="off"'); ?>
@@ -113,7 +113,7 @@ echo zen_draw_pull_down_menu('suburb',$unit_array,'','id = "suburb" style="width
 ?>
 
 <label class="inputLabel" for="postcode"><?php echo ENTRY_POST_CODE; ?></label>
-<?php echo zen_draw_input_field('postcode', '46254', zen_set_field_length(TABLE_ADDRESS_BOOK, 'entry_postcode', '40') . ' id="postcode"') . (zen_not_null(ENTRY_POST_CODE_TEXT) ? '<span class="alert">' . ENTRY_POST_CODE_TEXT . '</span>': ''); ?>
+<?php echo zen_draw_input_field('postcode', '46202', zen_set_field_length(TABLE_ADDRESS_BOOK, 'entry_postcode', '40') . ' id="postcode"') . (zen_not_null(ENTRY_POST_CODE_TEXT) ? '<span class="alert">' . ENTRY_POST_CODE_TEXT . '</span>': ''); ?>
 <br class="clearBoth" />
 <?php $country = '223'; $selected_country = '223';?>
 <label class="inputLabel" for="country"><?php echo ENTRY_COUNTRY; ?></label>

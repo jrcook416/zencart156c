@@ -37,16 +37,16 @@
 	$entry->fields['entry_lastname'] = $_SESSION['customer_last_name'];
 	} // end if 
   if (!isset($entry->fields['entry_company'])){
-  	$entry->fields['entry_company'] = "Indianapolis EMS";
+  	$entry->fields['entry_company'] = "Indianapolis Fire Department";
   }
   if (!isset($entry->fields['entry_street_address'])){
-  	$entry->fields['entry_street_address'] = "3930 Georgetown Road";
+  	$entry->fields['entry_street_address'] = "955 Fort Wayne Avenue";
   }
   if (!isset($entry->fields['entry_city'])){
   	$entry->fields['entry_city'] = "Indianapolis";
   }
   if (!isset($entry->fields['entry_postcode'])){
-	$entry->fields['entry_postcode'] = "46254";
+	$entry->fields['entry_postcode'] = "46202";
 	}
 /* THE FOLLOWING LINES ARE FOR DEBUGGING THE ABOVE CODE.  PLEASE LEAVE INTACT AND JUST COMMENT OUT.	
 	echo '<pre>' . print_r($entry, true) . '</pre>';
