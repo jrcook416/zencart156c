@@ -36,6 +36,7 @@
 // email advisory included warning for all emails customer generate - tell-a-friend and GV send
   define('EMAIL_ADVISORY_INCLUDED_WARNING', '<strong>This message is included with all emails sent from this site:</strong>');
 
+define('EMAIL_TEXT_TELEPHONE', 'Telephone: ');
 
 // Admin additional email subjects
   define('SEND_EXTRA_CREATE_ACCOUNT_EMAILS_TO_SUBJECT','[CREATE ACCOUNT]');

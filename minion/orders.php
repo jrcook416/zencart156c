@@ -506,31 +506,20 @@ foreach ($predefinedCommentsArray as $value) {
             </div>
           </div>
         </div>
-        <div class="row"><?php echo zen_draw_separator(); ?></div>
-        <div class="row">
+<div class="row"><?php echo zen_draw_separator(); ?></div>
+        <!---<div class="row">--->
           <div class="col-sm-4">
-		  <table class="table">
+            <table class="table">
               <tr>
                 <td><strong><?php echo ENTRY_SHIPPING_ADDRESS; ?></strong></td>
                 <td><?php echo zen_address_format($order->delivery['format_id'], $order->delivery, 1, '', '<br>'); ?></td>
               </tr>
               <tr>
-                <td>&nbsp;</td>
+                <td class="noprint">&nbsp;</td>
                 <td class="noprint"><a href="https://maps.google.com/maps/search/?api=1&amp;query=<?php echo urlencode($order->delivery['street_address'] . ',' . $order->delivery['city'] . ',' . $order->delivery['state'] . ',' . $order->delivery['postcode']); ?>" target="map"><i class="fa fa-map">&nbsp;</i> <u><?php echo TEXT_MAP_SHIPPING_ADDRESS; ?></u></a></td>
               </tr>
             </table>
             <table class="table">
-              <tr>
-                <td class="noprint"><strong><?php echo ENTRY_CUSTOMER_ADDRESS; ?></strong></td>
-                <td class="noprint"><?php echo zen_address_format($order->customer['format_id'], $order->customer, 1, '', '<br>'); ?></td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td class="noprint"><a href="https://maps.google.com/maps/search/?api=1&amp;query=<?php echo urlencode($order->customer['street_address'] . ',' . $order->customer['city'] . ',' .  $order->customer['state'] . ',' . $order->customer['postcode']); ?>" target="map"><i class="fa fa-map">&nbsp;</i> <u><?php echo TEXT_MAP_CUSTOMER_ADDRESS; ?></u></a></td>
-              </tr>
-              <tr>
-                <td colspan="2"><?php echo zen_draw_separator('pixel_trans.gif', '1', '5'); ?></td>
-              </tr>
               <tr>
                 <td><strong><?php echo ENTRY_TELEPHONE_NUMBER; ?></strong></td>
                 <td><a href="tel:<?php echo preg_replace('/\s+/', '', $order->customer['telephone']); ?>"><?php echo $order->customer['telephone']; ?></a></td>
@@ -557,6 +546,16 @@ foreach ($predefinedCommentsArray as $value) {
             </table>
           </div>
           <div class="col-sm-4">
+            <table class="table">
+              <tr>
+                <td class="noprint"><strong><?php echo ENTRY_CUSTOMER_ADDRESS; ?></strong></td>
+                <td class="noprint"><?php echo zen_address_format($order->customer['format_id'], $order->customer, 1, '', '<br>'); ?></td>
+              </tr>
+              <tr>
+                <td class="noprint">&nbsp;</td>
+                <td class="noprint"><a href="https://maps.google.com/maps/search/?api=1&amp;query=<?php echo urlencode($order->customer['street_address'] . ',' . $order->customer['city'] . ',' .  $order->customer['state'] . ',' . $order->customer['postcode']); ?>" target="map"><i class="fa fa-map">&nbsp;</i> <u><?php echo TEXT_MAP_CUSTOMER_ADDRESS; ?></u></a></td>
+              </tr>
+              </table>
           </div>
           <div class="col-sm-4">
             <table class="table">
@@ -565,12 +564,11 @@ foreach ($predefinedCommentsArray as $value) {
                 <td class="noprint"><?php echo zen_address_format($order->billing['format_id'], $order->billing, 1, '', '<br>'); ?></td>
               </tr>
               <tr>
-                <td>&nbsp;</td>
+                <td class="noprint">&nbsp;</td>
                 <td class="noprint"><a href="https://maps.google.com/maps/search/?api=1&amp;query=<?php echo urlencode($order->billing['street_address'] . ',' . $order->billing['city'] . ',' . $order->billing['state'] . ',' . $order->billing['postcode']); ?>" target="map"><i class="fa fa-map">&nbsp;</i> <u><?php echo TEXT_MAP_BILLING_ADDRESS; ?></u></a></td>
               </tr>
             </table>
-          </div>
-        </div>
+            </div>
         <div class="row"><?php echo zen_draw_separator('pixel_trans.gif', '1', '10'); ?></div>
         <div class="row"><strong><?php echo ENTRY_ORDER_ID . $oID; ?></strong></div>
         <div class="row">
@@ -632,10 +630,10 @@ foreach ($predefinedCommentsArray as $value) {
             <tr class="dataTableHeadingRow">
               <th class="dataTableHeadingContent" colspan="2"><?php echo TABLE_HEADING_PRODUCTS; ?></th>
               <th class="dataTableHeadingContent"><?php echo TABLE_HEADING_PRODUCTS_MODEL; ?></th>
-              <th class="dataTableHeadingContent text-right"><?php echo TABLE_HEADING_TAX; ?></th>
-              <th class="dataTableHeadingContent text-right"><?php echo TABLE_HEADING_PRICE_EXCLUDING_TAX; ?></th>
-              <th class="dataTableHeadingContent text-right"><?php echo TABLE_HEADING_PRICE_INCLUDING_TAX; ?></th>
-              <th class="dataTableHeadingContent text-right"><?php echo TABLE_HEADING_TOTAL_EXCLUDING_TAX; ?></th>
+              <th class="dataTableHeadingContent text-right noprint"><?php echo TABLE_HEADING_TAX; ?></th>
+              <th class="dataTableHeadingContent text-right noprint"><?php echo TABLE_HEADING_PRICE_EXCLUDING_TAX; ?></th>
+              <th class="dataTableHeadingContent text-right noprint"><?php echo TABLE_HEADING_PRICE_INCLUDING_TAX; ?></th>
+              <th class="dataTableHeadingContent text-right noprint"><?php echo TABLE_HEADING_TOTAL_EXCLUDING_TAX; ?></th>
               <th class="dataTableHeadingContent text-right"><?php echo TABLE_HEADING_TOTAL_INCLUDING_TAX; ?></th>
             </tr>
             <?php
@@ -666,14 +664,14 @@ foreach ($predefinedCommentsArray as $value) {
                     ?>
                 </td>
                 <td class="dataTableContent"><?php echo $order->products[$i]['model']; ?></td>
-                <td class="dataTableContent text-right"><?php echo zen_display_tax_value($order->products[$i]['tax']); ?>%</td>
-                <td class="dataTableContent text-right">
+                <td class="dataTableContent text-right noprint"><?php echo zen_display_tax_value($order->products[$i]['tax']); ?>%</td>
+                <td class="dataTableContent text-right noprint">
                   <strong><?php echo $currencies->format($order->products[$i]['final_price'], true, $order->info['currency'], $order->info['currency_value']) . ($order->products[$i]['onetime_charges'] != 0 ? '<br>' . $currencies->format($order->products[$i]['onetime_charges'], true, $order->info['currency'], $order->info['currency_value']) : ''); ?></strong>
                 </td>
-                <td class="dataTableContent text-right">
+                <td class="dataTableContent text-right noprint">
                   <strong><?php echo $currencies->format(zen_add_tax($order->products[$i]['final_price'], $order->products[$i]['tax']), true, $order->info['currency'], $order->info['currency_value']) . ($order->products[$i]['onetime_charges'] != 0 ? '<br>' . $currencies->format(zen_add_tax($order->products[$i]['onetime_charges'], $order->products[$i]['tax']), true, $order->info['currency'], $order->info['currency_value']) : ''); ?></strong>
                 </td>
-                <td class="dataTableContent text-right">
+                <td class="dataTableContent text-right noprint">
                   <strong><?php echo $currencies->format(zen_round($order->products[$i]['final_price'], $currencies->get_decimal_places($order->info['currency'])) * $order->products[$i]['qty'], true, $order->info['currency'], $order->info['currency_value']) . ($order->products[$i]['onetime_charges'] != 0 ? '<br>' . $currencies->format($order->products[$i]['onetime_charges'], true, $order->info['currency'], $order->info['currency_value']) : ''); ?></strong>
                 </td>
                 <td class="dataTableContent text-right">
