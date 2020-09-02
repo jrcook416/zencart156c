@@ -18,6 +18,7 @@ $parameters = array(
   'products_model' => '',
   'products_image' => '',
   'products_price' => '0.0000',
+  'products_uom'=> '',
   'products_virtual' => DEFAULT_DOCUMENT_PRODUCT_PRODUCTS_VIRTUAL,
   'products_weight' => '0',
   'products_date_added' => '',
@@ -46,7 +47,7 @@ $pInfo = new objectInfo($parameters);
 
 if (isset($_GET['pID']) && empty($_POST)) {
   $product = $db->Execute("SELECT pd.products_name, pd.products_description, pd.products_url,
-                                  p.products_id, p.products_quantity, p.products_model,
+                                  p.products_id, p.products_quantity, p.products_price_uom, p.products_model,
                                   p.products_image, p.products_price, p.products_virtual, p.products_weight,
                                   p.products_date_added, p.products_last_modified,
                                   date_format(p.products_date_available, '%Y-%m-%d') as
@@ -71,6 +72,13 @@ if (isset($_GET['pID']) && empty($_POST)) {
   $products_description = isset($_POST['products_description']) ? $_POST['products_description'] : '';
   $products_url = isset($_POST['products_url']) ? $_POST['products_url'] : '';
 }
+	$uom_array = (array(array('id' )=> '', 'text' => 'TEST'));
+    $uom = $db->Execute("select `uom` from `uom` order by `uom`");
+    while (!$uom->EOF){
+    	$uom_array[] = array ('id'=> $uom->fields['uom'],
+    			'text' => $uom->fields['uom']);
+    	$uom->MoveNext();
+    }
 
 $category_lookup = $db->Execute("SELECT *
                                  FROM " . TABLE_CATEGORIES . " c,
