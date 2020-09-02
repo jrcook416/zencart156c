@@ -188,12 +188,13 @@ if (false) {
     }
 }
     // $new_fields = ', product_is_free, product_is_call, product_is_showroom_only';
-    $product_check = $db->Execute("select products_tax_class_id, products_price, products_priced_by_attribute, product_is_free, product_is_call from " . TABLE_PRODUCTS . " where products_id = '" . (int)$products_id . "'" . " limit 1");
+    $product_check = $db->Execute("select products_tax_class_id, products_price, products_priced_by_attribute, product_is_free, product_is_call, products_price_uom from " . TABLE_PRODUCTS . " where products_id = '" . (int)$products_id . "'" . " limit 1");
 
     $show_display_price = '';
     $display_normal_price = zen_get_products_base_price($products_id);
     $display_special_price = zen_get_products_special_price($products_id, true);
     $display_sale_price = zen_get_products_special_price($products_id, false);
+	$display_uom = $product_check->fields['products_price_uom'];
 
     $show_sale_discount = '';
     if (SHOW_SALE_DISCOUNT_STATUS == '1' and ($display_special_price != 0 or $display_sale_price != 0)) {
