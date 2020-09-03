@@ -18,10 +18,11 @@ if (STORE_STATUS == '0') {
 <br>NOTICE: There is a worldwide shortage of exam gloves.  The situation has rapidly escalated and supplies
 are extremely limited. Prices have increased dramatically and supply has decreased rapidly.  
 Please contact IEMS Logistics Chief Kevin Gona at (317) 223-8431 with questions. 
-<br><p>MAD devices are back in stock. 
-<br><p>The following drugs are on critical nationwide shortage and may be unavailable. 
-We cannot guarantee pharmacy item delivery due to the shortages:<br>
-<li>Adrenaline<li>Atropine<li>Calcium Chloride<li>Dextrose 10 percent in 50 mL bag<li>Dextrose 50 percent syringe<li>Sodium Bicarbonate 4.2 percent <li>Sodium Bicarbonate 8.4 percent<li>Magnesium Sulfate 2 gram/50 mL bag.');
+<br><p>Note: Pediatric SpO2 disposable sensors are on indefinite backorder and NOT AVAILABLE.</p>
+<br><p>MAD devices are back in stock.</p>
+<br><p>The following drugs are on critical nationwide shortage and may be unavailable. </p>
+<p>We cannot guarantee pharmacy item delivery due to the shortages:<br>
+<li>Adrenaline<li>Atropine<li>Calcium Chloride<li>Dextrose 10 percent in 50 mL bag<li>Dextrose 50 percent syringe<li>Sodium Bicarbonate 4.2 percent <li>Sodium Bicarbonate 8.4 percent<li>Magnesium Sulfate 2 gram/50 mL bag.<p>');
 
 
 define('TEXT_INFORMATION', 'Define your main Index page copy here.');
