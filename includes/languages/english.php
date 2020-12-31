@@ -166,7 +166,7 @@
   define('ERROR_CONDITIONS_NOT_ACCEPTED', 'Please confirm the terms and conditions bound to this order by ticking the box below.');
   define('ERROR_PRIVACY_STATEMENT_NOT_ACCEPTED', 'Please confirm the privacy statement by ticking the box below.');
 
-  define('CATEGORY_COMPANY', 'Company Details');
+  define('CATEGORY_COMPANY', 'Agency Details');
   define('CATEGORY_PERSONAL', 'Your Personal Details');
   define('CATEGORY_ADDRESS', 'Your Address');
   define('CATEGORY_CONTACT', 'Your Contact Information');
@@ -177,8 +177,8 @@
   define('PLEASE_SELECT', 'Please select ...');
   define('TYPE_BELOW', 'Type a choice below ...');
 
-  define('ENTRY_COMPANY', 'Company Name:');
-  define('ENTRY_COMPANY_ERROR', 'Please enter a company name.');
+  define('ENTRY_COMPANY', 'Agency Name:');
+  define('ENTRY_COMPANY_ERROR', 'Please enter an agency name.');
   define('ENTRY_COMPANY_TEXT', '');
   define('ENTRY_GENDER', 'Salutation:');
   define('ENTRY_GENDER_ERROR', 'Please choose a salutation.');
