@@ -15,8 +15,7 @@ if (STORE_STATUS == '0') {
 } else {
   define('TEXT_GREETING_GUEST', 'Welcome, please enjoy our online showcase.');
 }define('TEXT_GREETING_PERSONAL', 'Hello <span class="greetUser">%s</span>!<br>
-}define('TEXT_GREETING_PERSONAL', 'Hello <span class="greetUser">%s</span>!<br>
-<br><br> NOTICE: Narcan grant funding has run out. <br> Narcan pricing is as noted on the order pages.');');
+<br><br> NOTICE: Narcan grant funding has run out. <br> Narcan pricing is as noted on the order pages.');
 
 
 define('TEXT_INFORMATION', 'Define your main Index page copy here.');
