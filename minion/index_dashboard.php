@@ -13,7 +13,7 @@ $number_of_visitors_history = 15;
 $notifications = new AdminNotifications();
 $availableNotifications = $notifications->getNotifications('index', $_SESSION['admin_id']);
 
-echo ($_SESSION);
+print_r($_SESSION);
 
 require(DIR_WS_CLASSES . 'currencies.php');
 $currencies = new currencies();
