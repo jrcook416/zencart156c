@@ -174,7 +174,8 @@ for ($i=0, $n=sizeof($products); $i<$n; $i++) {
                             'buttonDelete'=>$buttonDelete,
                             'checkBoxDelete'=>$checkBoxDelete,
                             'id'=>$products[$i]['id'],
-                            'attributes'=>$attrArray);
+                            'attributes'=>$attrArray,
+							'uom'=>$uom);
 } // end FOR loop
 
 

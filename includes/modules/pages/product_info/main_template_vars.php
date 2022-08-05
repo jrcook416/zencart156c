@@ -1,5 +1,5 @@
 <?php
-//IEMS Edited File
+//IEMS Edited File - UOM
 /**
  *  product_info main_template_vars.php
  *
