@@ -1,5 +1,4 @@
 git-push-production.sh
-git-pull-production.sh
-git-update-push.sh
 git-update-pull.sh
+git-update-push.sh
 test.sh
