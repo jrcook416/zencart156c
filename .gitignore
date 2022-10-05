@@ -1,6 +1,10 @@
 git-pull-production.sh
 git-push-production.sh
 git-update-pull.sh
+<<<<<<< HEAD
+net-git-update-pull.sh
+=======
 git-update-push.sh
 
 
+>>>>>>> github/dev-local
