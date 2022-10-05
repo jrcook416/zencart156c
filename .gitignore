@@ -2,3 +2,4 @@ git-pull-production.sh
 git-push-production.sh
 git-update-push.sh
 git-update-pull.sh
+net-git-update-pull.sh
