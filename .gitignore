@@ -1,3 +1,6 @@
+git-pull-production.sh
+git-push-production.sh
 git-update-pull.sh
-images.zip
-git-push.sh
+git-update-push.sh
+
+
