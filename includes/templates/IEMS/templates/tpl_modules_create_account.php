@@ -70,10 +70,10 @@
 <?php
   if (ACCOUNT_SUBURB == 'true') {
 ?>
-<label class="inputLabel" for="suburb"><span style="background-color:yellow"><?php echo ENTRY_SUBURB; ?></span></label>
+<label class="inputLabel" for="suburb"><?php echo ENTRY_SUBURB; ?></span></label>
 <?php 
 unit_lookup();
-echo zen_draw_pull_down_menu('suburb',$unit_array,'','id = "suburb" style="width: 20em; background-color:yellow"');
+echo zen_draw_pull_down_menu('suburb',$unit_array,'','id = "suburb"');
 ?>
 <br><b>Please select the unit that you will be primarily ordering for.</b>
 <br class="clearBoth" />
