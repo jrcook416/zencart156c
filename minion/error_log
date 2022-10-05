@@ -51,3 +51,18 @@
 [17-Jul-2020 12:26:07 America/Indianapolis] PHP Parse error:  syntax error, unexpected 'suburb' (T_STRING), expecting ',' or ')' in /home/g445kxms4qgi/public_html/zencart156c/minion/edit_orders.php on line 976
 [17-Jul-2020 12:30:59 America/Indianapolis] PHP Parse error:  syntax error, unexpected 'suburb' (T_STRING), expecting ',' or ')' in /home/g445kxms4qgi/public_html/zencart156c/minion/edit_orders.php on line 976
 [17-Jul-2020 12:32:36 America/Indianapolis] PHP Parse error:  syntax error, unexpected 'suburb' (T_STRING), expecting ',' or ')' in /home/g445kxms4qgi/public_html/zencart156c/minion/edit_orders.php on line 976
+[10-Aug-2022 13:55:15 America/Indianapolis] PHP Parse error:  syntax error, unexpected '"' in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 523
+[10-Aug-2022 13:56:23 America/Indianapolis] PHP Parse error:  syntax error, unexpected '"' in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 523
+[10-Aug-2022 13:57:19 America/Indianapolis] PHP Parse error:  syntax error, unexpected '"' in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 500
+[10-Aug-2022 13:58:13 America/Indianapolis] PHP Parse error:  syntax error, unexpected '"' in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 500
+[10-Aug-2022 14:06:38 America/Indianapolis] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE) in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 523
+[10-Aug-2022 14:07:39 America/Indianapolis] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE) in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 523
+[10-Aug-2022 14:08:31 America/Indianapolis] PHP Parse error:  syntax error, unexpected '' . " $_POST(order_status_sett' (T_CONSTANT_ENCAPSED_STRING) in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 523
+[10-Aug-2022 14:09:29 America/Indianapolis] PHP Parse error:  syntax error, unexpected ''";' (T_CONSTANT_ENCAPSED_STRING) in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 524
+[10-Aug-2022 14:09:36 America/Indianapolis] PHP Parse error:  syntax error, unexpected ''";' (T_CONSTANT_ENCAPSED_STRING) in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 524
+[10-Aug-2022 14:09:44 America/Indianapolis] PHP Parse error:  syntax error, unexpected ''";' (T_CONSTANT_ENCAPSED_STRING) in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 524
+[10-Aug-2022 14:10:45 America/Indianapolis] PHP Parse error:  syntax error, unexpected '*' in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 530
+[10-Aug-2022 14:12:45 America/Indianapolis] PHP Parse error:  syntax error, unexpected '*' in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 530
+[10-Aug-2022 14:25:57 America/Indianapolis] PHP Parse error:  syntax error, unexpected '*' in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 530
+[10-Aug-2022 14:34:00 America/Indianapolis] PHP Parse error:  syntax error, unexpected ''. $order_details->fields['' (T_CONSTANT_ENCAPSED_STRING) in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 523
+[10-Aug-2022 14:34:40 America/Indianapolis] PHP Parse error:  syntax error, unexpected '"' in /home/g445kxms4qgi/public_html/iems/minion/shipping_export.php on line 523
