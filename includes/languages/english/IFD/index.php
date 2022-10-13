@@ -15,10 +15,10 @@ if (STORE_STATUS == '0') {
 } else {
   define('TEXT_GREETING_GUEST', 'Welcome, please enjoy our online showcase.');
 }define('TEXT_GREETING_PERSONAL', 'Hello <span class="greetUser">%s</span>!<br>
+<br><img src = "../images/softball-2022.png" width="500px"><br>
 <br><br> NOTICE: Narcan grant funding has run out. <br> Narcan pricing is as noted on the order pages.
-<br><br> NOTICE: Please note that for security purposes, any communication about orders or deliveries to IEMS Logistics <b>must</b> come from an official Indianapolis Fire Department e-mail account.');
-
-
+<br><br> NOTICE: For security purposes, all communications about Logistics orders or deliveries must come from an official agency e-mail account.
+');
 define('TEXT_INFORMATION', 'Define your main Index page copy here.');
 
 //moved to english
