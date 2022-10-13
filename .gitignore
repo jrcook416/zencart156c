@@ -1,6 +1,4 @@
-git-pull-production.sh
-git-push-production.sh
-net-git-update-pull.sh
-git-update-push.sh
-git-update-pull.sh
-
+dot-net-git-update-pull.sh
+dot-net-git-update-push.sh
+pull.sh
+push.sh
