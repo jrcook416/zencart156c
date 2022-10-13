@@ -1,2 +1,4 @@
-
-git-update-pull.sh
+dot-net-git-update-pull.sh
+dot-net-git-update-push.sh
+pull.sh
+push.sh
