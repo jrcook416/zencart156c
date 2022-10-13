@@ -15,7 +15,6 @@ if (STORE_STATUS == '0') {
 } else {
   define('TEXT_GREETING_GUEST', 'Welcome, please enjoy our online showcase.');
 }define('TEXT_GREETING_PERSONAL', 'Hello <span class="greetUser">%s</span>!<br>
-<br><img src = "../images/softball-2022.png" width="500px"><br>
 <br><br> NOTICE: Narcan grant funding has run out. <br> Narcan pricing is as noted on the order pages.');
 
 
