@@ -15,6 +15,7 @@ if (STORE_STATUS == '0') {
 } else {
   define('TEXT_GREETING_GUEST', 'Welcome, please enjoy our online showcase.');
 }define('TEXT_GREETING_PERSONAL', 'Hello <span class="greetUser">%s</span>!<br>
+<br><img src = "../images/softball-2022.png" width="500px"><br>
 <br>NOTICE: There is a worldwide shortage of exam gloves.  The situation has rapidly escalated and supplies
 are extremely limited. Prices have increased dramatically and supply has decreased rapidly.  
 Please contact IEMS Logistics Chief Kevin Gona at (317) 223-8431 with questions. 
