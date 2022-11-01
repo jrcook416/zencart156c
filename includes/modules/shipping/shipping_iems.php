@@ -8,7 +8,7 @@
  */
 
 
-  class item {
+  class iems {
     var $code, $title, $description, $icon, $enabled;
 
 // class constructor
