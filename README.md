@@ -10,19 +10,19 @@ It's free software, with free community-driven support available 24/7 on the Zen
 --------------------
 Zen Cart&reg; v156c for Indianapolis EMS Logistics
 ---------------------
-Zen Cart&reg; v156c branches for Indianapolis EMS Logistics correspond to the subdirectory-specific instance for each serviced agency type:
-1. **master** - This branch contains the master code base without site-specific template overrides.  Version-specific code should be placed into this branch, then this branch should be merged into the independent site-specific branch to ensure all code is consistent and correct.  **Independent template files are contained in all branches - the site-specific branch is a fall-back to ensure that bad code does not make it into a production site.**
-2. **dev-local** - This branch contains code that is under development for release to the master branch and subsequent merge/push to the site-specific branch.
-3. **external** - This branch contains code specific to the External Agency site.
-4. **iems** - This branch contains code specific to the Indianapolis EMS agency site.
-5. **ifd** - This branch contains code specific to the Indianapolis Fire Department agency site.
-6. **leo** - This branch contains code specific to the Law Enforcement Agencies site.
-7. **wayne** - This branch contians code specific to the Wayne Township agency site.
+Zen Cart&reg; v156c branches for Indianapolis EMS Logistics correspond to the subdirectory-specific instance for each serviced agency type OR the function of the branch.  The agency-specific branches contain the same code that the **master** and **dev-local** branches have - this is an artifact of how the site was built prior to Git version control and its implementation.  All site changes should be coded in **dev-local** on a suitable development machine, verified for consistency and function on the same development machine, then **dev-local** on the development machine should be pushed to the **dev-local** branch on GitHub, then marged into **master**. From **master** on GitHub, the changes should be merged into the individual site branches on GitHub and then pulled into the branches on the production environment. **At no time should untested or unverified changes be pulled into the production environment**.  Note that there are independent template files for each agency-specific site in all branches - this is so a new site or replacement site can be created by cloning the **master** repository into a new directory, creating a new template set and configuration files, and testing the new site.
 
-No branches actively pull changes from upstream/v156c tags or branches.  All branches should be exactly similar to the code in **dev-local** or **master**. The only reason that specific branches exist is that this code was created without the benefit of .git version control which was not implemented prior to v156c.  All changes should be started in **dev-local**, then merged into **master**, then merged into each individual site-specific branch. 
+
+The specific branches are as follows: 
+1. **master** - This branch contains the master code base for v156c. It should contain the most recent and stable changes for the software across the site.  
+2. **dev-local** - This branch contains code that is under development for release to the master branch and subsequent merge/push to the site-specific branch.
+3. **external** - This branch is checked out on the External Agency site.
+4. **iems** - This branch is checked out on the Indianapolis EMS agency site.
+5. **ifd** - This branch is checked out on the Indianapolis Fire Department agency site.
+6. **leo** - This branch is checked out on the Law Enforcement Agencies site.
+7. **wayne** - This branch is checked out on the Wayne Township agency site. 
 
 This README.md document should exist in each branch - each individual README.md document should highlight the specific branch that the document is located in, and specific Markdown documents should be created to illustrate site-specific needs in configuration, data design, or operation.
-
 
 ----------------------
 
