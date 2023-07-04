@@ -8,14 +8,14 @@
  */
 
 
-  class iems {
+  class iemsshipping {
     var $code, $title, $description, $icon, $enabled;
 
 // class constructor
     function __construct() {
       global $order, $db;
 
-      $this->code = 'iems';
+      $this->code = 'iemsshipping';
       $this->title = MODULE_SHIPPING_IEMS_TEXT_TITLE;
       $this->description = MODULE_SHIPPING_IEMS_TEXT_DESCRIPTION;
       $this->sort_order = defined('MODULE_SHIPPING_IEMS_SORT_ORDER') ? MODULE_SHIPPING_IEMS_SORT_ORDER : null;

@@ -1,1 +1,0 @@
-Please note: <br><br> orders should be delivered within the next 12 hours.  <br><br>Order confirmations and packing lists will be sent via e-mail. <br><br><br> 
