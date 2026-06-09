@@ -2,3 +2,6 @@ dot-net-git-update-pull.sh
 dot-net-git-update-push.sh
 pull.sh
 push.sh
+/includes/configure.php
+/minion/includes/configure.php
+/minion/shipping_export.php
